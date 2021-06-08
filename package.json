@@ -1,0 +1,40 @@
+{
+  "name": "abitolutup-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js",
+    "build-prod": "git checkout master && git pull origin master && yarn && tsc",
+    "build-dev": "git checkout development && git pull origin development && yarn && tsc -p ./tsconfig-dev.json"
+  },
+  "author": "Jhonnanthn Balsas",
+  "license": "ISC",
+  "dependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/multer": "^1.4.5",
+    "@types/multer-s3": "^2.7.9",
+    "@types/uuid": "^8.3.0",
+    "aws-sdk": "^2.918.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "lodash": "^4.17.21",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "mysql": "^2.18.1",
+    "ts-node-dev": "^1.1.6",
+    "typeorm": "^0.2.32",
+    "typescript": "^4.3.2",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.6.1",
+    "@types/yup": "^0.29.11"
+  }
+}
